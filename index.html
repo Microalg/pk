@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>MicroAlg @ PK</title>
+    <meta name="description"
+          content="Exemples MicroAlg pour une présentation Pecha Kucha." />
+    <meta name="keywords" content="microalg, algo, algorithme, algorithmique, lisp, environnement" />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="../emulisp/emulisp_core.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="../web/style.css" />
+    <script type="text/javascript" src="../web/ide_injections.js"></script>
+    <script type="text/javascript" src="../web/parenedit.js"></script>
+    <link type="text/css" href="../web/parenedit.css" rel="stylesheet" />
+    <script src="../web/showdown.js"></script>
+    <script src="../web/showup.js"></script>
+    <link type="text/css" href="../web/showup.css" rel="stylesheet" />
+    <script type="text/javascript" src="../web/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="../web/blockly_microalg.js"></script>
+    <link rel="icon" href="../visuels/logo_microalg.ico" />
+</head>
+<body class="microalg">
+    <noscript>
+        <div style="color:#CC0000; text-align:center">
+        Besoin de Javascript pour les exercices interactifs.
+        </div>
+    </noscript>
+    <div class="navbar">
+        <a href="../">accueil</a> :
+        <a href="#top">haut de page</a>
+    </div>
+    <h1 id="top">MicroAlg @ Pecha Kucha</h1>
+    <p>Aller directement à :
+    <a href="#ex1">Exemple 1</a> -
+    </p>
+
+    <h2 id="ex1"><a href="#ex1">: </a>Exemple 1</a></h2>
+    <div id="script-afficher"></div>
+    <script>inject_microalg_editor_in('script-afficher', {
+     blockly: true,
+     src:
+        '(Afficher "Bonjour PK !")\n' +
+        '(Afficher (+ 2 2))\n' +
+        ''
+    });</script>
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <script>
+        $().showUp('.navbar', {
+            upClass: 'navbar-show',
+            downClass: 'navbar-hide'
+        });
+    </script>
+</body>
+</html>
