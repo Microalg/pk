@@ -32,6 +32,8 @@
     <h1 id="top">MicroAlg @ Pecha Kucha</h1>
     <p>Aller directement à :
     <a href="#ex1">Exemple 1</a> -
+    <a href="#ex2">Exemple 2</a> -
+    <a href="diapos.html">Diaporama</a>
     </p>
 
     <h2 id="ex1"><a href="#ex1">: </a>Exemple 1</a></h2>
@@ -41,6 +43,27 @@
      src:
         '(Afficher "Bonjour PK !")\n' +
         '(Afficher (+ 2 2))\n' +
+        ''
+    });</script>
+
+    <h2 id="ex2"><a href="#ex2">: </a>Exemple 2</a></h2>
+    <div id="script-conjugaisons"></div>
+    <script>inject_microalg_editor_in('script-conjugaisons', {
+     src:
+        '(Initialiser sujets (Liste "yo" "tú" "él" "nosotros" "vosotros" "ellos"))\n' +
+        '(Initialiser conjugs (Liste "a" "as" "a" "amos" "áis" "an"))\n' +
+        '(Afficher "Veuillez entrer une racine verbale, comme « cant » pour « cantar ».")\n' +
+        '(Initialiser racine (Demander))\n' +
+        '(Initialiser i 1)\n' +
+        '(Tant_que (<= i 6)\n' +
+        ' Faire\n' +
+        '    (Afficher\n' +
+        '        (Concatener\n' +
+        '            (Nieme sujets i) " " racine "<code>" (Nieme@ conjugs) "</code>"\n' +
+        '        )\n' +
+        '    )\n' +
+        '    (Affecter_a i (+ i 1))\n' +
+        ')\n' +
         ''
     });</script>
     
